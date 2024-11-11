@@ -3,31 +3,34 @@
 # Declare characters used by this game. The color argument colorizes the
 # name of the character.
 
-define e = Character("Eileen")
+#region Characters
+define Vicky = Character("Vicky", color = "#df1d1d")
+define Ger = Character("Gertrude", color = "#6b5050ff")
+define mysGer = Character("???", color = "#6b5050ff")
+#endregion
 
+#region images
+#Gertrude
+image gerPic = "images/art/Gertrude/Gertrude Standard Pose no leg.png"
 
-# The game starts here.
+#Vicky
+image VickyPic = "images/art/FoxGal/Fox Standard Pose facing right no leg750x1000.png"
+image VickyPicLegs = "images/art/FoxGal/Fox Standard Pose facing right no leg.png"
+image annoyedVicky = "images/art/FoxGal/Fox Annoyed Pose facing right no leg 750x1000.png"
+#endregion
 
 label start:
-
-    # Show a background. This uses a placeholder by default, but you can
-    # add a file (named either "bg room.png" or "bg room.jpg") to the
-    # images directory to show it.
-
-    scene bg room
-
-    # This shows a character sprite. A placeholder is used, but you can
-    # replace it by adding a file named "eileen happy.png" to the images
-    # directory.
-
-    show eileen happy
-
-    # These display lines of dialogue.
-
-    e "You've created a new Ren'Py game."
-
-    e "Once you add a story, pictures, and music, you can release it to the world!"
-
-    # This ends the game.
-
+    #region Bounce code
+    #something at bounce with dissolve
+    transform bounce:
+        pause .15
+        yoffset 0
+        easein .175 yoffset -10
+        easeout .175 yoffset 0
+        easein .175 yoffset -4
+        easeout .175 yoffset 0
+        yoffset 0
+#endregion
+    $ sshake = Shake((0, 0, 0, 0), 1.0, dist=15)
+    call part1
     return
