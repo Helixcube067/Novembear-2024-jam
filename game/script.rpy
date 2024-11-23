@@ -7,6 +7,8 @@
 define Vicky = Character("Vicky", color = "#df1d1d")
 define Ger = Character("Gertrude", color = "#6b5050ff")
 define mysGer = Character("???", color = "#6b5050ff")
+define mysDad = Character("???", color = "#bd400fff")
+define Hustace = Character("Hustace", color = "#bd400fff")
 #endregion
 
 #region backgrounds
@@ -20,6 +22,7 @@ image noSignal = "/images/backgrounds/no_signal.png"
 image partyScene = "/images/backgrounds/partyscene.png"
 image townSquare = "/images/backgrounds/Town_Square.jpg"
 image woodsScene = "/images/backgrounds/woods.jpg"
+image bearDadFirstScene = "/images/backgrounds/beardad_firstlook.jpg"
 #endregion
 
 #region images
@@ -28,6 +31,10 @@ image gerPic = "images/art/Gertrude/Gertrude Standard Pose no leg.png"
 
 #Vicky
 image vickyStandard = "/images/art/FoxGal/Fox Standard Pose facing right no leg650.png"
+image vickyStandardFlipped = "/images/art/FoxGal/Fox Standard Pose facing left no leg650.png"
+#Hustace
+image hustaceStandard = "/images/art/Hustace/Hustace Standard Posehalf.png"
+image hustaceLaugh = "/images/art/Hustace/Huebert laugh Posehalf.png"
 #endregion
 
 label start:
