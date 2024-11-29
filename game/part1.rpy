@@ -3,6 +3,7 @@ label part1:
     stop music fadeout 1.0
     window hide
     scene carScene
+    with fade
     $ renpy.pause(1.25)
     scene carScene2
     with fade
@@ -51,7 +52,9 @@ label part1:
     with dissolve
     "I've never seen a place better named in my life,{w} except maybe shank alley behind the old glass factory."
     "There's a post office, a city hall, and a general store / inn / restaurant, all huddled around a towns square that's really just a dirt circle."
+    show noSignal at center with dissolve
     "I pull out my cellphone for a moment, then sigh as, unsurprisingly, I get no signal. Looks like my time in Sleepy Creek is really going to be spent {b}{i}IN{/i}{/b} Sleepy Creek."
+    hide noSignal with dissolve
     show gerPic at right with dissolve
     Ger "Now now, dearie,"
     "Gertrude's hand on my shoulder makes me jump."
@@ -65,24 +68,34 @@ label part1:
     show gerPic at right with dissolve
     Ger "Alright, dearie, welcome to your first day at new beginnings! I'm sure they explained it to you at the courthouse, but I'm here to make sure it gets that special Gerty touch!"
     "She slapped the top of the box."
-    "Now, out here, in case you hadn't noticed, we don't have the best roads. Diesel costs an arm and a leg, and the general store ain't exactly stocked to feed a town of hungry autumn bears."
+    Ger "Now, out here, in case you hadn't noticed, we don't have the best roads. Diesel costs an arm and a leg, and the general store ain't exactly stocked to feed a town of hungry autumn bears."
     "She opens the box, revealing gold-yellow cardboard cartons inside. She pulls one out without even a grunt, and thumps it on the counter." with sshake
     "A happy flight of bumblebees is emblazoned on the front, and she pops the cap off, letting the scent of honey fill the room."
+    hide gerPic
+    show gerLaugh at right
     Ger "Now, you best be glad I talked them into putting these in cartons! Some nincompoop was going to send them all up in glass jars. Can you imagine?"
     Ger "'But honey comes in jars' bah! And common sense clearly comes in beauracrats."
+    hide gerLaugh
+    show gerPic at right
     "She clears her throat."
     Ger "Sorry, dearie, anyway. Your job is to be delivering honey rations around town."
     "She digs a clipboard out of the box and passes it to me."
-    "Here's the list. Now, you'll be making deliveries every day. We could just do the shipments in bulk but {i}someone{/i} {w=0.75}was clearly worried some fool honey-crazed bear was gonna put himself in a diabetic coma, so we need to space them out throughout the coming months."
-    "Back in my day we just trusted folks to have common sense, but nooooooo."
+    Ger "Here's the list. Now, you'll be making deliveries every day. We could just do the shipments in bulk but {i}someone{/i} {w=0.75}was clearly worried some fool honey-crazed bear was gonna put himself in a diabetic coma, so we need to space them out throughout the coming months."
+    hide gerPic
+    show gerAngry at right
+    Ger "Back in my day we just trusted folks to have common sense, but nooooooo."
     "I gulp as I look at the crate. The more I look, the heavier it seems."
     Vicky "I...{w=0.75}don't have to deliver that whole thing, do I?"
     "Gertrude cackles again."
+    hide gerAngry
+    show gerLaugh at right
     Ger "Well it's certainly not going to sit here on my counter!"
     "She cackles harder at my expression."
-    "No, no, don't worry, this is a week's supply. How much honey do you think a bear can eat?"
+    Ger "No, no, don't worry, this is a week's supply. How much honey do you think a bear can eat?"
     "I swallow a smart response, but the glitter behind Gerty's glasses makes me think she caught it anyway."
     Vicky "So, uh, when do I start."
     "Gerty taps the clipboard in my hands."
-    "No time like the present! In fact, I think I have just the place for you to start!"
-    call part2
+    hide gerLaugh
+    show gerPic at right
+    Ger "No time like the present! In fact, I think I have just the place for you to start!"
+    call part2 from _call_part2
