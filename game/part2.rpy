@@ -23,8 +23,8 @@ label part2:
     "I only now realize how close I've gotten.{w} And that it's falling towards me."
     "Fuck."
     mysDad "Look out!"
-    "A voice roars at me, but years of drunk dodging cross-walk traffic haven't been for nothing" 
-    "I throw myself forward as that hammer of wood and branches crashes down close enough to leave twigs in my tail."
+    "A voice roars at me, but years of drunk dodging cross-walk traffic haven't been for nothing." 
+    "I throw myself forward as that hammer of wood and branches crashes down close enough to leave twigs in my tail." with sshake
     "Suddenly, one of those sneaky roots takes my paw the wrong way, and pain lances up my leg as I go down with a yelp."
     "Suddenly I'm in shadow, and my heart freezes as that bear looms over me. Somehow he seems even larger than the tree as he looms over me, a dark shadow blotting out the sky, his face an angry glower."
     # scene bearDadFirstScene
@@ -56,7 +56,7 @@ label part2:
     scene woodsScene 
     with dissolve
     show vickyStandard at left with dissolve
-    show hustaceStandard at right with dissolve
+    show hustaceAngry at right with dissolve
     Hustace "Ah hell, Gert, why won't you just leave well enough alone?"
     "He flips open the pack and snorts."
     Hustace "Don't even like honey, you old biddy."
@@ -68,6 +68,8 @@ label part2:
     "I turn to leave without actually waiting for an answer, and manage to limp a whole two steps before a heavy hand is on my shoulder."
     hide vickyStandardFlipped
     show vickyStandard at left
+    hide hustaceAngry
+    show hustaceSad at right
     Hustace "Now, hold up there. Don't go haring off into the woods like that. Even if your paw ain't broken, you're just gonna hurt it worse. Let me help."
     "Again I'm scooped up into his arms, and I can't help but flush from about 80%% indignation."
     Vicky "H-hey! I'm supposed to be bringing the food to you. And I can take care of myself!"
@@ -79,6 +81,8 @@ label part2:
     "I feel an argument rising in my throat again, but the throbbing of my paw smothers it. My feet were already hurting before one was nearly twisted off by this stupid forest."
     "Might as well make the best of it."
     "As the silence begins to press in again, my fur starts to prickle."
+    hide hustaceSad
+    show hustaceAngry at right
     Vicky "So, uh,{w} you don't like honey?"
     "He sighs and rolls his eyes, frowning off into the middle distance as he carries me up the trail."
     Hustace "No, and that old biddy knows it too. She's always been a troublemaker. Probably figures if the honey won't work she'll try the vinegar instead."
@@ -88,36 +92,51 @@ label part2:
     Hustace "So if she can't wheedle me into town, she's gonna try and annoy me into it."
     "I think about that a moment."
     Vicky "So the honey is vinegar?"
-    hide hustaceStandard
+    hide hustaceAngry
     show hustaceLaugh at right with dissolve
     "He brightens for a moment, and honestly? He's got a good smile."
     Hustace "You got it!"
     hide hustaceLaugh
-    show hustaceStandard at right
+    show hustaceSad at right
     "Then, like a passing cloud, the smile disappears, replaced by a distant, sad look."
     Vicky "You alright?"
     Hustace "Oh, huh?"
+    hide hustaceSad
+    show hustaceStandard at right
     "His eyes focus, as if he'd been looking straight past me for a moment."
     Hustace "Sorry, just, remembering things."
     "He fixes a warm smile back in place, but I can't help but feel like I'm looking at one of those gas fireplaces with fake logs the yuppies like so much."
     Hustace "So where'd Gertrude dig you up?"
+    hide vickyStandard
+    show vickyAnnoyedRight at left
     Vicky "She hardly dug me up!"
     "I prickle at the thought of being plucked out of the soil like some grubby radish."
     Vicky "Just got in a bit of trouble, that's all. Serve my debt to society."
     "He lets out that sigh that only parents can do, and I immediately find myself prickling."
     Vicky "Hey! It was all harmless fun. Wasn't doing anything bad. Nothing worse than, I dunno,{w=0.75} crashing tractors into each other."
+    hide hustaceStandard
+    show hustaceSad at right
     "Surprisingly, his eyes dart away, and his ears twitch back with embarrassment. I can already feel a grin building on my face."
+    hide vickyAnnoyedRight
+    show vickySlyRight at right
     Vicky "No way, you {i}actually{/i} crash tractors into each other"
     "I giggle as his ears flick back further."
+    hide hustaceSad
+    show hustaceAngry at right
     Hustace "{i}Crashed{/i}. And for the record, {i}I{/i} never wrecked anything. That was Davy, and he was was trying to impress a girl."
     Hustace "..."
+    hide hustaceAngry
+    show hustaceSad at right
     Hustace "And I'm very ashamed of it and it was very immature."
     "I fix him with a stare as his eyes continue to avoid mine, a gleeful realization dawning on me."
     Vicky "No you're nooooot~"
     Vicky "I bet Davy crashed because he lost,{w=0.75} didn't he?"
     "He puffs up a little, even as his ears remain shamefully plastered back."
+    hide hustaceSad
+    show hustaceStandard at right
     Hustace "Well, maybe I had a girl to impress too.{w} And maybe he should have known better than to challenge the town champ."
-    "His expression darkened a bit."
+    hide hustaceStandard
+    show hustaceAngry at right
     Hustace "And maybe Davy should have chickened out to the side that didn't have a flooded ditch. {w=0.75}Idiot."
     "I shifted a bit, deciding to treat his grip as more of a chaise lounge instead of an impostion, and continued to fix him with a grin."
     Vicky "Look at you, daddy bear throwing rocks in glass houses. {w=0.75}Barns?"
