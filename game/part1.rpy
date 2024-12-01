@@ -2,26 +2,30 @@ label part1:
     #do something with the start transition
     stop music fadeout 1.0
     window hide
-    scene carScene
+    scene carSceneLooking
     with fade
     $ renpy.pause(1.25)
-    scene carScene2
-    with fade
     window auto
+    scene carSceneGertyTalking
     mysGer "So what brings you out to Verschlafener Bach?"
+    scene carSceneNobodyTalking
+    $ renpy.pause(1.25)
+    scene carSceneLooking
     "For a moment I pretend not to hear her, the sound of her voice almost drowned out by the clatter of shot-out suspension over gravel."
     "Every bump and sway makes the whole truck rattle like an old garage toolbox, and I grip the door handle a little harder just to make sure the thing doesn't fall off its hinges."
     "Outside, more green streams by than I've ever seen in my life. Trees after trees after trees, like an endless hallway into the wild."
     "The moments stretch on, and I start to feel silly. I was told it was going to be a several hour drive, and here I am already sulking like a little kid."
     "It's not her fault I'm here. Just just a sweet country bumpkin trying to be friendly."
-    scene carScene3
-    scene carScene4
+    scene carSceneVickyTalking
     Vicky "I got in trouble."
+    scene carSceneGertyTalking
     mysGer "Oh, well I gathered that much, dearie!"
     "She laughs warmly, making me feel like even more of a kid, but not quite in a bad way."
     Ger "Ol' Gerty wants details!"
+    scene carSceneNobodyTalking
     "For a moment, I feel a pang of pity. Of course she'd want to make conversation. This is probably the most interesting thing that's happened to her all year."
     "I sat a little straighter, the seat upholstry popping a few stitches."
+    scene carSceneVickyTalking
     Vicky "Well...you see..."
     scene black
     with fade
@@ -34,6 +38,8 @@ label part1:
     "It was all thanks to a little rat, literally and figuratively, by the name of Samantha."
     "Credit where credit's due, she could have been something. Kinda cute, could at least color coordinate, I'd almost rate her a thrift-shop version of me. Problem is, she knew it too."
     "It was the biggest party of the year. Downtown, east side warehouse. They'd brought in lights, fog machines, gonna have sets by DJ HardTime (ironic in retrospect). And there I was in the center of it. Bumping, grinding, right there in the heart of the pit."
+    scene partyPolice
+    with dissolve
     "Too bad I was riding too high to notice when the laser show changed to flashing red and blue."
     "I only realized it was more than a boy getting a little rough when the cuffs slapped on my wrists."
     scene jailScene
@@ -44,7 +50,7 @@ label part1:
     "Somebody up top had already gotten to do their whole 'tough on crime' bit as it was, so the judge went easy on me."
     "Few hundred hours community service, and I'd be free to go. After all, wasn't like I'd shot anyone, or sold any of the drugs there myself."
     "And so ends my tale of treachery and woe. {w} Well, the treachery bit. {w} Something told me,{w=0.75} as a pothole tried to rearrange my spine,{w=0.75} that the woe was just beginning."
-    scene black 
+    scene black
     with fade
     "The car mercifully slows to a halt at last, and I nearly fall over getting out. It feels like I've gone 4 hours at the worlds first combination boxing ring / massage parlor, and I can barely feel my poor ass.{w} And not even in a fun way."
     "At least it gives me a chance to look at Sleepy Creek, what there is of it."

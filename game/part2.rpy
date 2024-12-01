@@ -118,7 +118,7 @@ label part2:
     show hustaceSad at right
     "Surprisingly, his eyes dart away, and his ears twitch back with embarrassment. I can already feel a grin building on my face."
     hide vickyAnnoyedRight
-    show vickySlyRight at right
+    show vickySlyRight at left
     Vicky "No way, you {i}actually{/i} crash tractors into each other"
     "I giggle as his ears flick back further."
     hide hustaceSad
@@ -145,3 +145,4 @@ label part2:
     Hustace "I am perfectly one to judge, {w} I settled down, met a nice girl that didn't need me to crash tractors to impress her, and had two lovely daughters and lots of wonderful, responsible friends."
     Vicky "Who now send you honey and irresponsible foxes to pester you."
     "He grumbled again."
+    call part3 from _call_part3
