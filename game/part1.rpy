@@ -2,15 +2,16 @@ label part1:
     #do something with the start transition
     stop music fadeout 1.0
     window hide
-    scene carSceneLooking
+    scene black
     with fade
     $ renpy.pause(1.25)
     window auto
-    scene carSceneGertyTalking
-    mysGer "So what brings you out to Verschlafener Bach?"
+    play music "oldtruckdriving.mp3" fadein 0.5 loop volume 0.5
+    Ger "So what brings you out to Verschlafener Bach?"
     scene carSceneNobodyTalking
     $ renpy.pause(1.25)
     scene carSceneLooking
+    with dissolve
     "For a moment I pretend not to hear her, the sound of her voice almost drowned out by the clatter of shot-out suspension over gravel."
     "Every bump and sway makes the whole truck rattle like an old garage toolbox, and I grip the door handle a little harder just to make sure the thing doesn't fall off its hinges."
     "Outside, more green streams by than I've ever seen in my life. Trees after trees after trees, like an endless hallway into the wild."
@@ -19,30 +20,36 @@ label part1:
     scene carSceneVickyTalking
     Vicky "I got in trouble."
     scene carSceneGertyTalking
-    mysGer "Oh, well I gathered that much, dearie!"
+    Ger "Oh, well I gathered that much, dearie!"
+    scene carSceneNobodyTalking
     "She laughs warmly, making me feel like even more of a kid, but not quite in a bad way."
+    scene carSceneGertyTalking
     Ger "Ol' Gerty wants details!"
     scene carSceneNobodyTalking
     "For a moment, I feel a pang of pity. Of course she'd want to make conversation. This is probably the most interesting thing that's happened to her all year."
     "I sat a little straighter, the seat upholstry popping a few stitches."
     scene carSceneVickyTalking
     Vicky "Well...you see..."
-    scene black
-    with fade
-    show vickyStandard at center with dissolve
+    stop music fadeout 1.0
+    scene partyScene   
+    with dissolve
+    play music "Furry VN - Fox Girl Theme.mp3" fadein 0.5 loop volume 0.5
     "Name's Vicky. Vic to my friends, 'the V' to those who wanna be my friends, and 'V the B' to anyone unlucky enough not to make those lists."
     "Yes, I was that kind of girl, the kind other girls want to be seen with, and the boys just want to be with. I was pretty,{w=0.75} witty,{w=0.75} and actually fashionable{w=0.75}, none of that store-bought brand-name crap. Your party wasn't a party until the V showed up."
     "So what happened?{w} Why was the life of the party packed into a rattling box of bolts rolling out to lumberjack land?"
-    scene partyScene
-    with dissolve
     "It was all thanks to a little rat, literally and figuratively, by the name of Samantha."
     "Credit where credit's due, she could have been something. Kinda cute, could at least color coordinate, I'd almost rate her a thrift-shop version of me. Problem is, she knew it too."
     "It was the biggest party of the year. Downtown, east side warehouse. They'd brought in lights, fog machines, gonna have sets by DJ HardTime (ironic in retrospect). And there I was in the center of it. Bumping, grinding, right there in the heart of the pit."
+    play audio "police-siren-21498.mp3" fadein 0.5 volume 0.5
     scene partyPolice
     with dissolve
     "Too bad I was riding too high to notice when the laser show changed to flashing red and blue."
     "I only realized it was more than a boy getting a little rough when the cuffs slapped on my wrists."
+    stop music fadeout 0.5
     scene jailScene
+    play music "jail(start).ogg" volume 0.25
+    stop music
+    play music "jail(loop).ogg" loop volume 0.25
     with dissolve
     "I don't have any proof Sam called the fuzz, but I sure didn't see that little tart that night, and if there was one thing that girl desperately wanted, it was to be seen."
     "So there I was,{w=0.75} behind bars instead of at the bar,{w=0.75} waiting for some stuffed suit in a robe to tell me how many years I'd be doing."
@@ -53,29 +60,42 @@ label part1:
     scene black
     with fade
     "The car mercifully slows to a halt at last, and I nearly fall over getting out. It feels like I've gone 4 hours at the worlds first combination boxing ring / massage parlor, and I can barely feel my poor ass.{w} And not even in a fun way."
+    play sound "truck open close.mp3" volume 0.5
     "At least it gives me a chance to look at Sleepy Creek, what there is of it."
     scene townSquare
     with dissolve
     "I've never seen a place better named in my life,{w} except maybe shank alley behind the old glass factory."
     "There's a post office, a city hall, and a general store / inn / restaurant, all huddled around a towns square that's really just a dirt circle."
     show noSignal at center with dissolve
+    play sound "defeated sigh.mp3"
     "I pull out my cellphone for a moment, then sigh as, unsurprisingly, I get no signal. Looks like my time in Sleepy Creek is really going to be spent {b}{i}IN{/i}{/b} Sleepy Creek."
     hide noSignal with dissolve
+    show vickyAnnoyedRight at left with dissolve
     show gerPic at right with dissolve
     Ger "Now now, dearie,"
+    show vickyAnnoyedRight at bounce, left
     "Gertrude's hand on my shoulder makes me jump."
+    hide vickyAnnoyedRight
+    show vickyStandard at left
+    hide gerPic
+    show gerLaugh at right
     Ger "No sulking. Don't worry, you'll be plenty busy up here. I hope you like walking!"
     "There's something distinctly un-grannylike about her cackle as she starts to lead me towards the general store."
     "As I approach, I finally see the name of the store, Gerty's.{w} Of course."
     scene gertyShop
+    play sound "intogerty's shop.mp3"
     with dissolve
     "Gerty places herself behind the counter and rummages around a moment, pulling out a little green baseball cap with the 'new beginnings' leaf stamped on the front, and exchanging her sun hat for it"
-    "Then, a moment later she heaves a massive package onto the counter with a resounding thud. I admit I blanch a bit. It sounded like that thing weighed as much as a kid!" with sshake
+    "Then, a moment later she heaves a massive package onto the counter with a resounding thud. I admit I blanch a bit."
+    play sound "boxthump.mp3" 
+    "It sounded like that thing weighed as much as a kid!" 
+    show vickyStandard at left with dissolve
     show gerPic at right with dissolve
     Ger "Alright, dearie, welcome to your first day at new beginnings! I'm sure they explained it to you at the courthouse, but I'm here to make sure it gets that special Gerty touch!"
     "She slapped the top of the box."
     Ger "Now, out here, in case you hadn't noticed, we don't have the best roads. Diesel costs an arm and a leg, and the general store ain't exactly stocked to feed a town of hungry autumn bears."
-    "She opens the box, revealing gold-yellow cardboard cartons inside. She pulls one out without even a grunt, and thumps it on the counter." with sshake
+    "She opens the box, revealing gold-yellow cardboard cartons inside. She pulls one out without even a grunt, and thumps it on the counter."
+    play sound "boxthump.mp3" 
     "A happy flight of bumblebees is emblazoned on the front, and she pops the cap off, letting the scent of honey fill the room."
     hide gerPic
     show gerLaugh at right

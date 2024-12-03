@@ -1,16 +1,23 @@
 label part2:
+    stop music fadeout 1.0
     scene woodsScene 
     with fade
+    play music "walk in snow.mp3"
     "By the third mile I'm positively sweating. How is the forest this warm in december?"
+    stop music
+    play sound "boxthump.mp3" volume 0.25
     "I sit down and drop my pack on the ground, and let my poor aching feet rest a minute on a nearby stump."
     "'Learn the trail before it gets snowy!' Gerty had told me. 'You'll thank me later!' Yeah, I'm gonna be reserving judgement on that, big time."
     "As I sit there, it dawns on me how incredibly quiet the forest is. The only thing I can hear is my own breathing. There are no cars, no voices, not even wind through the leaves."
     "There's just utter, {w=0.75}impossible, {w=0.75}silence."
     "I smooth down my fur as it fluffs up of its own accord. It doesn't feel natural, but that's absurd, this is as natural as it gets."
     "There's a thunk in the distance."
+    play music "tree chopping.mp3" volume 0.05
     "I bolt to my feet, looking around, but then I realize just how far away the sound is. Then my heart falls as I realize how {i}far{/i} the sound is."
     "Why does everything out here have to be miles apart. Though I suppose I wouldn't have a job if it wasn't."
     "Setting my aching paws back on the trail, I follow it towards that rhythmic thunk."
+    stop music fadeout 0.05
+    play music "tree chopping.mp3" volume 0.25
     "As I crest a hill, I find myself staring over more barren forest, broken only by a splash of red plaid and blue denim against the dead brown of fallen leaves."
     # scene bearDadFirstScene
     # with dissolve
@@ -22,24 +29,17 @@ label part2:
     "I look up just in time to notice the giant tree the bear had been working on starting to list and tumble."
     "I only now realize how close I've gotten.{w} And that it's falling towards me."
     "Fuck."
+    stop music fadeout 0.5
     mysDad "Look out!"
     "A voice roars at me, but years of drunk dodging cross-walk traffic haven't been for nothing." 
-    "I throw myself forward as that hammer of wood and branches crashes down close enough to leave twigs in my tail." with sshake
+    play sound "treefalling.mp3"
+    "I throw myself forward as that hammer of wood and branches crashes down close enough to leave twigs in my tail."
     "Suddenly, one of those sneaky roots takes my paw the wrong way, and pain lances up my leg as I go down with a yelp."
     "Suddenly I'm in shadow, and my heart freezes as that bear looms over me. Somehow he seems even larger than the tree as he looms over me, a dark shadow blotting out the sky, his face an angry glower."
-    # scene bearDadFirstScene
-    # with dissolve
     mysDad "Dammit, Gertrude! I've told her a hundred times."
-    "Easily hefting me around, I find my paw being held and examined as I dangle upside down, my pack tumbling askew."
-    mysDad "Doesn't look broken. Can you wiggle your paw?"
-    Vicky "Can I..."
-    "I belatedly remember that I'm not a sack of potatoes." 
-    Vicky "Put me down!"
-    mysDad "Oh, uh, sorry there. Old habits."
     "He flips me back upright with embarrassing ease, and I wince as my paw only barely manages to take my weight."
     "I try to heft my pack back into place, but at that moment my paw decides to give out, and again I'm in the huge bear's grasp."
     mysDad "Ah hell, even if it's not broken, you're not walking on that."
-    #not sure about this next part
     Vicky "I'll be fine!"
     "I huff, my dignity again bruised via manhandling."
     Vicky "And put me down!"
@@ -55,35 +55,43 @@ label part2:
     "I'd have placed him in his mid thirties when I first saw him, but in that moment he seems easily twice that and some change."
     scene woodsScene 
     with dissolve
-    show vickyStandard at left with dissolve
+    show vickyAnnoyedRight at left with dissolve
     show hustaceAngry at right with dissolve
     Hustace "Ah hell, Gert, why won't you just leave well enough alone?"
     "He flips open the pack and snorts."
     Hustace "Don't even like honey, you old biddy."
     Vicky "Well,"
+    show vickyAnnoyedRight at bounce, left
     "I cut in, wincing as I shift my footing."
     Vicky "If that's everything?"
-    hide vickyStandard
-    show vickyStandardFlipped at left
+    hide vickyAnnoyedRight
+    show vickyAnnoyedLeft at left
+    with dissolve
     "I turn to leave without actually waiting for an answer, and manage to limp a whole two steps before a heavy hand is on my shoulder."
-    hide vickyStandardFlipped
-    show vickyStandard at left
     hide hustaceAngry
     show hustaceSad at right
     Hustace "Now, hold up there. Don't go haring off into the woods like that. Even if your paw ain't broken, you're just gonna hurt it worse. Let me help."
     "Again I'm scooped up into his arms, and I can't help but flush from about 80%% indignation."
+    hide vickyAnnoyedLeft
+    show vickyAnnoyedRight at left
     Vicky "H-hey! I'm supposed to be bringing the food to you. And I can take care of myself!"
     "Admittedly, as much as this whole community service gig irritates me, I'm certainly not going to phone it in. Certainly not if it means Gertrude might not sign off on my service."
+    hide hustaceSad
+    show hustaceStandard at right
     Hustace "I'm sure you can,"
     "he said in tones of {i}obvious{/i} placation."
+    play music "walk in snow.mp3"
     Hustace "But it don't sit right with me, you coming all this way and hurting yourself because somebody wants to be a busybody."
     Hustace "Come on, ain't no shame in having a little help."
     "I feel an argument rising in my throat again, but the throbbing of my paw smothers it. My feet were already hurting before one was nearly twisted off by this stupid forest."
+    hide vickyAnnoyedRight
+    show vickyStandard at left
+    with dissolve
     "Might as well make the best of it."
     "As the silence begins to press in again, my fur starts to prickle."
-    hide hustaceSad
-    show hustaceAngry at right
     Vicky "So, uh,{w} you don't like honey?"
+    hide hustaceStandard
+    show hustaceAngry at right
     "He sighs and rolls his eyes, frowning off into the middle distance as he carries me up the trail."
     Hustace "No, and that old biddy knows it too. She's always been a troublemaker. Probably figures if the honey won't work she'll try the vinegar instead."
     Vicky "But she sent honey."
@@ -93,7 +101,7 @@ label part2:
     "I think about that a moment."
     Vicky "So the honey is vinegar?"
     hide hustaceAngry
-    show hustaceLaugh at right with dissolve
+    show hustaceLaugh at right
     "He brightens for a moment, and honestly? He's got a good smile."
     Hustace "You got it!"
     hide hustaceLaugh
@@ -113,6 +121,7 @@ label part2:
     "I prickle at the thought of being plucked out of the soil like some grubby radish."
     Vicky "Just got in a bit of trouble, that's all. Serve my debt to society."
     "He lets out that sigh that only parents can do, and I immediately find myself prickling."
+    show vickyAnnoyedRight at bounce, left
     Vicky "Hey! It was all harmless fun. Wasn't doing anything bad. Nothing worse than, I dunno,{w=0.75} crashing tractors into each other."
     hide hustaceStandard
     show hustaceSad at right
@@ -145,4 +154,5 @@ label part2:
     Hustace "I am perfectly one to judge, {w} I settled down, met a nice girl that didn't need me to crash tractors to impress her, and had two lovely daughters and lots of wonderful, responsible friends."
     Vicky "Who now send you honey and irresponsible foxes to pester you."
     "He grumbled again."
+    stop music fadeout 0.5
     call part3 from _call_part3

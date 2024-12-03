@@ -1,9 +1,9 @@
 ﻿#region Characters
-define Vicky = Character("Vicky", color = "#df1d1d")
-define Ger = Character("Gertrude", color = "#6b5050ff")
-define mysGer = Character("???", color = "#6b5050ff")
-define mysDad = Character("???", color = "#bd400fff")
-define Hustace = Character("Hustace", color = "#bd400fff")
+define Vicky = Character("Vicky", color = "#008080")
+define Ger = Character("Gertrude", color = "#00cdcd")
+define mysGer = Character("???", color = "#00cdcd")
+define mysDad = Character("???", color = "#00b3b3")
+define Hustace = Character("Hustace", color = "#00b3b3")
 #endregion
 
 #region backgrounds
@@ -22,7 +22,12 @@ image bearDadFirstScene = "/images/backgrounds/beardad first good lookwip.jpg"
 image Fairground = "/images/backgrounds/Fairground.png"
 image VickysRoom = "/images/backgrounds/Vicki's room.png"
 image vicNhu = "/images/backgrounds/vicky and hustace.png"
-
+image Chicken = "/images/backgrounds/showchicken.png"
+image Cornhole = "/images/backgrounds/cornholing.png"
+image TractorPull = "/images/backgrounds/tractor pulling.png"
+image NightWoods = "/images/backgrounds/woodsnight.png"
+image Confession = "/images/backgrounds/confession.png"
+image Kissy = "/images/backgrounds/kissykissy.png"
 #endregion
 
 #region images
@@ -35,17 +40,21 @@ image gerAngry = "images/art/Gertrude/Gertrude angryPose no leg.png"
 image vickyStandard = "/images/art/FoxGal/right standard.png"
 image vickyStandardFlipped = "/images/art/FoxGal/left standard.png"
 image vickyAnnoyedRight = "/images/art/FoxGal/right annoyed.png"
-image vickySlyRight = "/images/art/FoxGal/left annoyed.png"
+image vickyAnnoyedLeft = "/images/art/FoxGal/left annoyed.png"
+image vickySlyRight = "/images/art/FoxGal/right sly.png"
 image vickyFairExcited = "/images/art/FoxGal/right mid excited.png"
 image vickyFairFlirt = "/images/art/FoxGal/right mid flirt.png"
 image vickyFairStandard = "/images/art/FoxGal/right mid standard.png"
-image vickyFairSmile= "/images/art/FoxGal/right mid warmsmile.png"
-image chonkyVickyStandard= "/images/art/FoxGal/chonky vicki standard.png"
-image chonkyVickySmile = "/images/art/FoxGal/chonky vicki standard.png"
+image vickyFairSmile = "/images/art/FoxGal/right mid warmsmile.png"
+image vickyFairPensive = "/images/art/FoxGal/right mid pensive.png"
+image vickyFairEmbarrassed = "/images/art/FoxGal/right mid embarrassed.png"
+image chonkyVickyStandard = "/images/art/FoxGal/chonky vicki standard.png"
+image chonkyVickySmile = "/images/art/FoxGal/chonky vicki happy smile.png"
 image chonkyVickyShy = "/images/art/FoxGal/chonky vicki shy.png"
-image chonkyVickySurprise = "/images/art/FoxGal/chonky vicki shy.png"
+image chonkyVickySurprise = "/images/art/FoxGal/chonky vicki surprised.png"
 image vickyHoneyDrink = "/images/art/FoxGal/drinkin honey.png"
 image vickyTummy = "/images/art/FoxGal/tummy.png"
+image vickyandhustace = "/images/backgrounds/vicky and hustace.png"
 
 #Hustace
 image hustaceStandard = "/images/art/Hustace/Hustace Standard Posehalf.png"
@@ -58,6 +67,7 @@ image hustaceFairAngry = "/images/art/Hustace/FairHuAngry.png"
 image hustaceFairLaugh = "/images/art/Hustace/Fair HuLaugh.png"
 image hustaceFairShy = "/images/art/Hustace/Huebert shy Posehalfno axe.png"
 image hustaceStandardFlipped = "/images/art/Hustace/Hustace Standard Posehalf Flipped.png"
+image hustaceAngryFlip = Transform("/images/art/Hustace/Huebert angry Posehalf.png", xzoom=-1) 
 #endregion
 
 label splashscreen:
@@ -69,32 +79,18 @@ label splashscreen:
     with Pause(1)
     return
 
-label start:
+
+label start: 
+    call part1 from _call_part1
     #region Bounce code
     #something at bounce with dissolve
     transform bounce:
         pause .15
         yoffset 0
-        easein .175 yoffset -10
-        easeout .175 yoffset 0
-        easein .175 yoffset -4
-        easeout .175 yoffset 0
+        easeout .08 yoffset 12
+        easein .08 yoffset 0
+        easeout .08 yoffset 6
+        easein .08 yoffset 0
         yoffset 0
 #endregion
-    #shake code here
-    $ sshake = Shake((0, 0, 0, 0), 1.0, dist=15)
-    menu:
-        "Skip to part 3?"
-        "Yes":
-            stop music fadeout 1.0
-            jump part3
-        "No":
-            call part1 from _call_part1
-    #call part1 from _call_part1
-    scene black
-    with fade
-    "And thanks all! Thanks for reading everybody! This was made for the Novembear 2024 Jam!"
-    "Here's a link to our lovely artist Danji! 
-    \n{a=https://danji-isthmus.itch.io/}Itchio{/a} | {a=https://bsky.app/profile/danjiisthmus.bsky.social}Bluesky{/a} | {a=https://www.furaffinity.net/user/danji-isthmus}FurAffinity{/a}"
-    "And I'm helix I'm the programmer! Heres where can check me out here: {a=https://helixcube.itch.io}Itchio{/a} | {a=https://bsky.app/profile/helixcube.bsky.social}Bluesky{/a}"
-    return
+
